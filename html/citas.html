@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../css/citas.css">
+</head>
+<body>
+    <div class="cita-box">
+    <h2>Sistema de Citas en Línea</h2>
+    <p>Reserva o consulta tus citas médicas en tu centro asistencial asignado.</p>
+
+    <!-- PASO 1: Validación del Asegurado -->
+    <div id="paso1">
+        <div class="paso-titulo">Paso 1: Validación del Asegurado</div>
+        <form id="formValidar" onsubmit="validarAsegurado(event)">
+            <div class="form-group">
+                <label for="numDni">Número de DNI *</label>
+                <input type="text" id="numDni" maxlength="8" placeholder="Ingrese 8 dígitos" required>
+            </div>
+            <div class="form-group">
+                <label for="fecNac">Fecha de Nacimiento *</label>
+                <input type="date" id="fecNac" required>
+            </div>
+            <button type="submit">Verificar Asegurado</button>
+        </form>
+    </div>
+
+    <!-- PASO 2: Selección de Especialidad y Cita (Oculto al inicio) -->
+    <div id="paso2" class="oculto">
+        <div class="paso-titulo">Paso 2: Datos de la Cita Médica</div>
+        <form id="formCita" onsubmit="reservarCita(event)">
+            <div class="form-group">
+                <label for="centroMedico">Centro Asistencial Asignado</label>
+                <input type="text" id="centroMedico" value="Hospital I Edgardo Rebagliati" readonly style="background-color: #e9ecef;">
+            </div>
+            
+            <div class="form-group">
+                <label for="especialidad">Especialidad Médica *</label>
+                <select id="especialidad" required>
+                    <option value="" disabled selected>-- Seleccione especialidad --</option>
+                    <option value="Medicina General">Medicina General</option>
+                    <option value="Odontología">Odontología</option>
+                    <option value="Pediatría">Pediatría</option>
+                    <option value="Ginecología">Ginecología</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fechaCita">Fecha Deseada *</label>
+                <input type="date" id="fechaCita" required>
+            </div>
+
+            <div class="form-group">
+                <label for="turno">Turno Disponible *</label>
+                <select id="turno" required>
+                    <option value="" disabled selected>-- Seleccione turno --</option>
+                    <option value="Mañana (08:00 AM - 12:00 PM)">Mañana (08:00 AM - 12:00 PM)</option>
+                    <option value="Tarde (02:00 PM - 06:00 PM)">Tarde (02:00 PM - 06:00 PM)</option>
+                </select>
+            </div>
+
+            <button type="submit">Confirmar y Reservar Cita</button>
+        </form>
+    </div>
+
+    <div id="mensajeArea" class="alerta oculto"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

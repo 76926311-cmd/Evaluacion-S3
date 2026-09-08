@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Trámites y Contacto - Seguro Social</title>
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+<body>
+    <div class="form-card">
+    <h2>Mesa de Partes y Contacto</h2>
+    <p>Selecciona el tipo de gestión que deseas realizar ante la entidad.</p>
+
+    <form id="tramiteForm" onsubmit="procesarFormulario(event)">
+        
+        <!-- 1. Tipo de Trámite -->
+        <div class="form-group">
+            <label for="tipoTramite">Tipo de Solicitud *</label>
+            <select id="tipoTramite" onchange="cambiarFormulario()" required>
+                <option value="" disabled selected>-- Selecciona una opción --</option>
+                <option value="contacto">Consulta o Contacto General</option>
+                <option value="solicitud">Solicitud de Prestación / Trámite</option>
+                <option value="reclamo">Libro de Reclamaciones</option>
+                <option value="cotizacion">Cotización / Aportes Independientes</option>
+            </select>
+        </div>
+
+        <!-- 2. Datos Personales Comunes -->
+        <div class="form-group">
+            <label for="nombre">Nombres y Apellidos *</label>
+            <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dni">Número de DNI / CE *</label>
+            <input type="text" id="dni" maxlength="9" placeholder="Ingrese 8 dígitos de DNI" required>
+        </div>
+
+        <div class="form-group">
+            <label for="correo">Correo Electrónico *</label>
+            <input type="email" id="correo" placeholder="correo@ejemplo.com" required>
+        </div>
+
+        <!-- 3. Campo Dinámico: Reclamo -->
+        <div id="campoReclamo" class="form-group dinamico">
+            <label for="codAtencion">Número de Cita / Código de Atención Afectado</label>
+            <input type="text" id="codAtencion" placeholder="Ej. CIT-2026-00123">
+        </div>
+
+        <!-- 4. Campo Dinámico: Cotización -->
+        <div id="campoCotizacion" class="form-group dinamico">
+            <label for="ingresoMensual">Ingreso Mensual Estimado (S/.)</label>
+            <input type="number" id="ingresoMensual" placeholder="Ej. 1200">
+        </div>
+
+        <!-- 5. Detalle del Mensaje -->
+        <div class="form-group">
+            <label for="mensaje">Detalle / Sustento *</label>
+            <textarea id="mensaje" rows="4" placeholder="Describe brevemente tu requerimiento..." required></textarea>
+        </div>
+
+        <button type="submit">Enviar Formulario</button>
+
+        <div id="mensajeEstado" class="mensaje-respuesta"></div>
+    </form>
+</div>
+
+
+
+
+
+
+
+    
+</body>
+</html>
+

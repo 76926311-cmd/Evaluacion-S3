@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essalud</title>
+    <link rel="stylesheet" href="../css/inicio.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">Seguro Social de Salud</div>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="citas.html">Citas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1. Presentación de la Entidad -->
+    <section class="hero" id="inicio">
+        <h1>Seguridad y Salud Integral a tu Servicio</h1>
+        <p>Brindamos cobertura médica, prestaciones económicas y servicios de salud 
+            a nuestros asegurados para garantizar el bienestar de la ciudadanía.</p>
+    </section>
+
+    <!-- Consulta rápida de seguro (Script integrado) -->
+    <div class="quick-search">
+        <h3>Consulta el Estado de tu Seguro</h3>
+        <p style="font-size:0.85rem; margin-bottom:1rem; color:#666;">Ingresa tu DNI para verificar si tu acreditación está activa.</p>
+        <input type="text" id="dniInput" placeholder="Número de DNI (8 dígitos)" maxlength="8">
+        <button class="btn" onclick="validarConsulta()">Consultar</button>
+        <p id="mensajeResultado" style="margin-top: 1rem; font-weight: bold;"></p>
+    </div>
+    <!-- 3. NUEVA SECCIÓN: Campañas de Salud Vigentes -->
+    <section class="campanas-container">
+        <h2 class="titulo-seccion">Campañas de Salud Vigentes</h2>
+        <p class="subtitulo-seccion">Participa en nuestras jornadas preventivas gratuitas a nivel nacional</p>
+
+        <div class="campanas-grid">
+            
+            <!-- Campaña 1 -->
+            <div class="campana-card">
+                <span class="badge badge-salud">Salud Preventiva</span>
+                <h3>Campaña de Vacunación Nacional</h3>
+                <p>Protege a tu familia contra la influenza y neumococo. Atención en todos los centros asistenciales sin previa cita.</p>
+                <div class="campana-info">
+                    <span>📅 Hasta el 30 de este mes</span>
+                    <span>⏰ 08:00 AM - 04:00 PM</span>
+                </div>
+            </div>
+
+            <!-- Campaña 2 -->
+            <div class="campana-card">
+                <span class="badge badge-prevencion">Despistaje Gratuito</span>
+                <h3>Prevención de Diabetes e Hipertensión</h3>
+                <p>Evaluación médica rápida, despistaje de glucosa y toma de presión arterial para asegurados mayores de 18 años.</p>
+                <div class="campana-info">
+                    <span>📅 Todos los viernes</span>
+                    <span>⏰ Policlínicos Asignados</span>
+                </div>
+            </div>
+
+            <!-- Campaña 3 -->
+            <div class="campana-card">
+                <span class="badge badge-donacion">Solidaridad</span>
+                <h3>Jornada de Donación Voluntaria de Sangre</h3>
+                <p>Tu donación salva vidas. Acércate a los puntos móviles en los principales hospitales de la red.</p>
+                <div class="campana-info">
+                    <span>📅 Campaña Permanente</span>
+                    <span>⏰ Unidades Móviles</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+
+
+    
+</body>
+</html>
+
+
+

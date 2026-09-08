@@ -1,0 +1,218 @@
+/* Reset general de márgenes y caja */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado y Navegación */
+header {
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #b3d7ff;
+}
+
+/* Sección de Presentación (Hero) */
+.hero {
+    background: linear-gradient(rgba(0, 86, 179, 0.85), rgba(0, 40, 90, 0.85)), 
+                url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1200') center/cover no-repeat;
+    color: #ffffff;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+/* Tarjeta de Consulta Rápida */
+.quick-search {
+    max-width: 550px;
+    margin: -2rem auto 3rem; /* Eleva levemente la tarjeta sobre la sección hero */
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.quick-search h3 {
+    color: #0056b3;
+    margin-bottom: 0.5rem;
+}
+
+.quick-search input {
+    width: 65%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    margin-right: 0.3rem;
+    outline: none;
+}
+
+.quick-search input:focus {
+    border-color: #0056b3;
+}
+
+/* Botón interactivo */
+.btn {
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #003d80;
+}
+
+/* Adaptación para pantallas móviles */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .quick-search input {
+        width: 100%;
+        margin-bottom: 0.8rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+/* Contenedor principal de campañas */
+.campanas-container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.titulo-seccion {
+    text-align: center;
+    color: #0056b3;
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.subtitulo-seccion {
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* Grilla de Campañas */
+.campanas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Tarjeta individual */
+.campana-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #0056b3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Badges / Etiquetas */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    width: fit-content;
+}
+
+.badge-salud { background-color: #e3f2fd; color: #0d47a1; }
+.badge-prevencion { background-color: #e8f5e9; color: #1b5e20; }
+.badge-donacion { background-color: #ffebee; color: #b71c1c; }
+
+.campana-card h3 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.campana-card p {
+    color: #666;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    margin-bottom: 1.2rem;
+}
+
+/* Metadatos de la campaña (Fecha y Hora) */
+.campana-info {
+    border-top: 1px solid #eee;
+    padding-top: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    color: #555;
+    font-weight: 600;
+}
